@@ -27,4 +27,12 @@ for line in lines_list:
     query_to_positions[query] = store_position_map
 
 
-print(query_to_positions)
+position_to_queries = {}
+for query, position_map in query_to_positions.items():
+    for position in position_map:
+        query_set = position_to_queries.get(position, set())
+        query_set.add(query)
+        position_to_queries[position] = query_set
+
+sorted_position_to_queries = {key: position_to_queries[key] for key in sorted(position_to_queries)}
+print(sorted_position_to_queries)

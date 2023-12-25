@@ -1,0 +1,15 @@
+{
+    "key": "API Key can be obtained from target.com website, please closely observe GET request in dev tools", 
+    "store_id": "0000 - 4 letter store id is part of query param when you select the store", 
+    "user_agent": "Mozilla%2F5.0+%28iPhone%3B+CPU+iPhone+OS+16_6+like+Mac+OS+X%29+AppleWebKit%2F605.1.15+%28KHTML%2C+like+Gecko%29+Version%2F16.6+Mobile%2F15E148+Safari%2F604.1",
+    "visitor_id": "ALPHANUMERIC CHARACTERS - present as part of query params, need to pass this information", 
+    "channel": "WEB",
+    "count": "3", 
+    "is_bot": "false", 
+    "new_search": "true",
+    "pricing_store_id": "0000 - same as store id",
+    "required_store_id": "0000 - same as store id",
+    "store_ids": "0000 - same as store id",
+    "has_required_store_id": "true"
+  }
+  
