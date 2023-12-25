@@ -22,3 +22,7 @@ def rate_limit():
   delay_milliseconds = 1000 
   offset = random.randint(500, 1000)
   time.sleep((delay_milliseconds+offset) / 1000)  # Convert milliseconds to seconds
+
+def dict_to_query_params(params_dict):
+    params_list = [f"{key}={value}" for key, value in params_dict.items()]
+    return "&".join(params_list)
