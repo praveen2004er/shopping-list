@@ -11,7 +11,7 @@ config = {}
 if len(args) > 1:
     config_file_path = args[1]
     config = read_config(config_file_path)
-    print(config)
+    print("Config read completed!!!")
 else:
     print("No config file provided.")
     exit()
@@ -19,7 +19,12 @@ else:
 file_path = 'groceries_list.txt'  
 lines_list = read_file_lines(file_path)
 
-for line in lines_list:
-    print(line.strip())
+query_to_positions = {}
 
-print(get_store_positions_for_query(config, 'milk'))
+for line in lines_list:
+    query = line.strip()
+    store_position_map = get_store_positions_for_query(config, query)
+    query_to_positions[query] = store_position_map
+
+
+print(query_to_positions)

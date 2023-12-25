@@ -16,7 +16,7 @@ def get_store_positions_for_query(config, query):
         json_response = get_json_response(url_to_fetch)
         if json_response:
             for pos in json_response['data']['product']['store_positions']:
-                aisle_key = str(pos['aisle']) + pos['block']
+                aisle_key = pos['block'] + str(pos['aisle']) 
                 store_positions[aisle_key] = pos
     return store_positions
 
