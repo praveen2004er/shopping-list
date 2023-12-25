@@ -35,4 +35,9 @@ for query, position_map in query_to_positions.items():
         position_to_queries[position] = query_set
 
 sorted_position_to_queries = {key: position_to_queries[key] for key in sorted(position_to_queries)}
-print(sorted_position_to_queries)
+
+print("======== Here we go !!! =======")
+for position, queries in sorted_position_to_queries.items():
+    print('Visit ', position, ' for ', list(queries))
+
+print("======== Happy Shopping !!! =======")
