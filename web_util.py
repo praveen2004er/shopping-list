@@ -20,7 +20,7 @@ def get_json_response(url):
         return None
 
 def rate_limit():
-  delay_milliseconds = 1000 
+  delay_milliseconds = 3000 
   offset = random.randint(500, 1000)
   time.sleep((delay_milliseconds+offset) / 1000)  # Convert milliseconds to seconds
 
